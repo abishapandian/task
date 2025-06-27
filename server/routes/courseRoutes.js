@@ -28,7 +28,7 @@ router.put("/:id" , async(req , res)=>{
         await db.execute("update coursedetails set username = ? , course = ? where id = ?" , [ editusername , editcourse , id]);
         res.json({message:"success"})
     } catch (error) {
-        res.json({message:"failed..." , error:error.message})
+        res.json({message:"failed operations..." , error:error.message})
     }
 })
 
